@@ -1,3 +1,6 @@
+/*global module*/
+/*global require*/
+/*jslint node: true */
 'use strict';
 
 module.exports = function (grunt) {
@@ -100,4 +103,5 @@ module.exports = function (grunt) {
   });
   grunt.registerTask('serve', ['connect', 'watch']);
   grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
+  grunt.registerTask('travis', ['jshint', 'connect', 'qunit']);
 };
