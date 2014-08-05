@@ -1,0 +1,27 @@
+{
+  "name": "widget-it",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cmanzana/widget-it",
+  "authors": [
+    "Carlos Manzanares"
+  ],
+  "description": "Widget-ification jQuery plugin",
+  "main": [
+    "min/widget-it.min.js",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10"
+  },
+  "devDependencies": {
+    "qunit": "~1.12.0",
+    "jquery": ">=1.10"
+  }
+}

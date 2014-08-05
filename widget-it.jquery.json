@@ -1,0 +1,28 @@
+{
+  "name": "widget-it",
+  "title": "Awesome jQuery plugin",
+  "description": "Widget-ification jQuery plugin",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cmanzana/widget-it",
+  "author": {
+    "name": "Carlos Manzanares",
+    "url": "https://github.com/cmanzana"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmanzana/widget-it"
+  },
+  "bugs": "https://github.com/cmanzana/widget-it/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.10"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ]
+}
