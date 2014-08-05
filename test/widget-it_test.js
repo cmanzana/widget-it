@@ -1,4 +1,5 @@
-(function($) {
+(function ($) {
+  'use strict';
   /*
     ======== A Handy Little QUnit Reference ========
     http://api.qunitjs.com/
@@ -20,9 +21,9 @@
       throws(block, [expected], [message])
   */
 
-  module('jQuery#awesome', {
+  module('jQuery#widgetIt', {
     // This will run before each test in this module.
-    setup: function() {
+    setup: function () {
       this.elems = $('#qunit-fixture').children();
     }
   });
@@ -38,7 +39,7 @@
     strictEqual(this.elems.awesome().text(), 'awesome0awesome1awesome2', 'should be awesome');
   });
 
-  module('jQuery.awesome');
+  module('jQuery.widgetIt');
 
   test('is awesome', function() {
     expect(2);
