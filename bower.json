@@ -7,7 +7,7 @@
   ],
   "description": "Widget-ification jQuery plugin",
   "main": [
-    "min/widget-it.min.js",
+    "min/widget-it.min.js"
   ],
   "license": "MIT",
   "ignore": [
