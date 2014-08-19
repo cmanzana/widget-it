@@ -43,12 +43,13 @@
           wheelSpeed: 20,
           wheelPropagation: false,
           scrollTopFunctionFactory: function (targetContainer) {
-            var marginTopStart = parseInt($("iframe").css("margin-top"), 10),
-              heightStart = parseInt($("iframe").css("height"), 10);
+            var iframe = targetContainer.children("iframe"),
+              marginTopStart = parseInt(iframe.css("margin-top"), 10),
+              heightStart = parseInt(iframe.css("height"), 10);
 
             return function (y) {
               if (isNaN(y)) {
-                return marginTopStart - parseInt($("iframe").css("margin-top"), 10);
+                return marginTopStart - parseInt(iframe.css("margin-top"), 10);
               } else {
                 if (y < 0) {
                   y = 0;
@@ -56,18 +57,19 @@
                   // FIXME: it does not stop in the right place: where does the 100 come from?
                   y = settings.contentHeight + marginTopStart - 100;
                 }
-                $("iframe").css("margin-top", marginTopStart - y);
-                $("iframe").css("height", heightStart + y);
+                iframe.css("margin-top", marginTopStart - y);
+                iframe.css("height", heightStart + y);
               }
             };
           },
           scrollLeftFunctionFactory: function (targetContainer) {
-            var marginLeftStart = parseInt($("iframe").css("margin-left"), 10),
-              widthStart = parseInt($("iframe").css("width"), 10);
+            var iframe = targetContainer.children("iframe"),
+              marginLeftStart = parseInt(iframe.css("margin-left"), 10),
+              widthStart = parseInt(iframe.css("width"), 10);
 
             return function (x) {
               if (isNaN(x)) {
-                return marginLeftStart - parseInt($("iframe").css("margin-left"), 10);
+                return marginLeftStart - parseInt(iframe.css("margin-left"), 10);
               } else {
                 if (x < 0) {
                   x = 0;
@@ -76,17 +78,17 @@
                   x = 290;
                 }
                 //console.log(x + ',' + marginLeftStart + ',' + widthStart);
-                $("iframe").css("margin-left", marginLeftStart - x);
-                $("iframe").css("width", widthStart + x);
+                iframe.css("margin-left", marginLeftStart - x);
+                iframe.css("width", widthStart + x);
               }
             };
           },
-          contentHeightFunctionFactory: function (targetContainer) {
+          contentHeightFunctionFactory: function () {
             return function () {
               return settings.contentHeight;
             };
           },
-          contentWidthFunctionFactory: function (targetContainer) {
+          contentWidthFunctionFactory: function () {
             return function () {
               return settings.contentWidth;
             };
